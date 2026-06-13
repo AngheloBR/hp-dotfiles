@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+~/.config/polybar/launch.sh &
+pgrep -x picom > /dev/null || picom --config ~/.config/picom/picom.conf &
+pgrep -x dunst > /dev/null || dunst &
+lxpolkit &
+
+# Regla del Scratchpad
+bspc rule -a Scratchpad state=floating rectangle=800x600+560+240 center=true
+
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    bspc monitor "$m" -d 1 2 3 4 5
+  done
+else
+  bspc monitor -d 1 2 3 4 5
+fi
+
+bspc config border_width         2
+bspc config window_gap          12
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config focus_follows_pointer true
+
+bspc config normal_border_color  "#1a1b26"
+bspc config active_border_color  "#414868"
+bspc config focused_border_color "#7aa2f7"

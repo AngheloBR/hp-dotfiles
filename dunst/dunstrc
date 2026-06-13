@@ -1,0 +1,15 @@
+[global]
+width = 300
+height = 100
+offset = 20x20
+origin = top-right
+corner_radius = 15
+frame_width = 2
+frame_color = "#7aa2f7"
+font = JetBrainsMono Nerd Font 10
+padding = 15
+horizontal_padding = 15
+transparency = 15
+background = "#1a1b26"
+[urgency_normal]
+foreground = "#c0caf5"

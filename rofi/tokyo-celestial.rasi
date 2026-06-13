@@ -1,0 +1,7 @@
+* { bg-col: #1a1b26cc; bg-col-light: #24283b; border-col: #7aa2f7; selected-col: #24283b; blue: #7aa2f7; fg-col: #c0caf5; fg-col2: #f7768e; font: "JetBrainsMono Nerd Font 12"; }
+window { width: 600px; border: 2px; border-color: @border-col; border-radius: 15px; background-color: @bg-col; }
+mainbox { background-color: transparent; padding: 20px; }
+inputbar { children: [prompt,entry]; background-color: @bg-col-light; border-radius: 10px; padding: 10px; }
+listview { background-color: transparent; padding: 10px 0px 0px 0px; columns: 1; lines: 6; }
+element { padding: 10px; background-color: transparent; text-color: @fg-col; border-radius: 8px; }
+element selected { background-color: @blue; text-color: #1a1b26; }
