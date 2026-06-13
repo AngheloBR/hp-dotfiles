@@ -22,7 +22,7 @@ echo "[*] Detectando helper de AUR..."
 AUR="pacman -S --noconfirm"
 if command -v paru &> /dev/null; then AUR="paru -S --noconfirm"; elif command -v yay &> /dev/null; then AUR="yay -S --noconfirm"; fi
 
-DEPENDENCIES=(bspwm sxhkd polybar rofi picom feh kitty ghostty btop cava dunst starship fastfetch sddm qt5-graphicaleffects lxsession)
+DEPENDENCIES=(xorg-server xorg-xinit bspwm sxhkd polybar rofi picom feh kitty ghostty btop cava dunst starship fastfetch sddm qt5-graphicaleffects lxsession)
 
 echo "[*] Instalando dependencias..."
 for dep in "${DEPENDENCIES[@]}"; do
